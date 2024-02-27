@@ -1,4 +1,4 @@
-import React from 'react'
+/*mport React from 'react'
 import { useFilterContext } from '../context/filter_context'
 import GridView from './GridView'
 import ListView from './ListView'
@@ -20,3 +20,19 @@ const ProductList = () => {
 }
 
 export default ProductList
+*/
+import React from "react";
+import Card from "./card"; // Make sure to provide the correct path to your Card component
+import { data } from "../utils/data";
+
+const ProductList = () => {
+  return (
+    <div>
+      {data.map((product) => (
+        <Card key={product.id} product={product} />
+      ))}
+    </div>
+  );
+};
+
+export default ProductList;
